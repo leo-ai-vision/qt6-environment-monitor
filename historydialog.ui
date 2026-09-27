@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HistoryDialog</class>
+ <widget class="QDialog" name="HistoryDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>720</width><height>420</height></rect></property>
+  <property name="windowTitle"><string>阈值历史记录</string></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <layout class="QHBoxLayout" name="filterLayout">
+     <item><widget class="QLabel" name="tempFilterLabel"><property name="text"><string>温度</string></property></widget></item>
+     <item><widget class="QLineEdit" name="tempEdit"><property name="placeholderText"><string>留空为全部</string></property></widget></item>
+     <item><widget class="QLabel" name="humFilterLabel"><property name="text"><string>湿度</string></property></widget></item>
+     <item><widget class="QLineEdit" name="humEdit"><property name="placeholderText"><string>留空为全部</string></property></widget></item>
+     <item><widget class="QPushButton" name="searchBtn"><property name="text"><string>查询</string></property></widget></item>
+     <item><widget class="QPushButton" name="resetBtn"><property name="text"><string>清空筛选</string></property></widget></item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="alternatingRowColors"><bool>true</bool></property>
+     <property name="columnCount"><number>4</number></property>
+     <column><property name="text"><string>ID</string></property></column>
+     <column><property name="text"><string>温度阈值 (°C)</string></property></column>
+     <column><property name="text"><string>湿度阈值 (%)</string></property></column>
+     <column><property name="text"><string>保存时间</string></property></column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="footerLayout">
+     <item><widget class="QLabel" name="resultLabel"><property name="text"><string>共 0 条记录</string></property></widget></item>
+     <item><spacer name="footerSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item><widget class="QPushButton" name="deleteBtn"><property name="text"><string>删除选中记录</string></property></widget></item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

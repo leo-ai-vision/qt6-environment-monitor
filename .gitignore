@@ -1,0 +1,10 @@
+# Build products and personal data
+build/
+.qtcreator/
+*.pro.user
+*.pro.user.*
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+Thumbs.db

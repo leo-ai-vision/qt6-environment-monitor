@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>520</width><height>390</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>温湿度模拟监测</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin"><number>22</number></property>
+   <property name="topMargin"><number>18</number></property>
+   <property name="rightMargin"><number>22</number></property>
+   <property name="bottomMargin"><number>18</number></property>
+   <property name="spacing"><number>12</number></property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="font"><font><pointsize>15</pointsize><bold>true</bold></font></property>
+     <property name="text"><string>环境温湿度模拟监测</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="helpLabel">
+     <property name="text"><string>拖动滑块模拟传感器读数，超过阈值时状态会变为警报。</string></property>
+     <property name="wordWrap"><bool>true</bool></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="temperatureGroup">
+     <property name="title"><string>温度</string></property>
+     <layout class="QVBoxLayout" name="temperatureLayout">
+      <item>
+       <layout class="QHBoxLayout" name="temperatureHeader">
+        <item><widget class="QLabel" name="labelTempValue"><property name="text"><string>0 °C</string></property></widget></item>
+        <item><spacer name="temperatureSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+        <item><widget class="QLabel" name="labelTempTh"><property name="text"><string>当前阈值：30 °C</string></property></widget></item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QSlider" name="tempSlider">
+        <property name="toolTip"><string>模拟温度：0–50 °C</string></property>
+        <property name="maximum"><number>50</number></property>
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="humidityGroup">
+     <property name="title"><string>湿度</string></property>
+     <layout class="QVBoxLayout" name="humidityLayout">
+      <item>
+       <layout class="QHBoxLayout" name="humidityHeader">
+        <item><widget class="QLabel" name="labelHumValue"><property name="text"><string>0 %</string></property></widget></item>
+        <item><spacer name="humiditySpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+        <item><widget class="QLabel" name="labelHumTh"><property name="text"><string>当前阈值：80 %</string></property></widget></item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QSlider" name="humSlider">
+        <property name="toolTip"><string>模拟湿度：0–100 %</string></property>
+        <property name="maximum"><number>100</number></property>
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="statusLabel">
+     <property name="minimumSize"><size><width>0</width><height>28</height></size></property>
+     <property name="text"><string>状态正常：当前读数未超过阈值</string></property>
+     <property name="wordWrap"><bool>true</bool></property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item><widget class="QPushButton" name="btnSet"><property name="text"><string>调整阈值</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnHistory"><property name="text"><string>查看历史记录</string></property></widget></item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
